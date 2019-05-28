@@ -27,8 +27,11 @@ fetch("https://randomuser.me/api/", {
 
 displayData = (json) => {
     console.log(json)
+    img.setAttribute("src", json.results[0].picture.large )
     p1.innerText = json.results[0].name.title + " " + json.results[0].name.first + " " + json.results[0].name.last
     p2.innerText = json.results[0].gender
     p3.innerText = "Date of birth: " + json.results[0].dob.date
-    img.setAttribute("src", json.results[0].picture.large )
+    p4.innerText = json.results[0].email
+    p5.innerText = json.results[0].cell
+    p6.innerText = json.results[0].login.username
 }
