@@ -5,6 +5,8 @@ let p3 = document.createElement("p")
 let p4 = document.createElement("p")
 let p5 = document.createElement("p")
 let p6 = document.createElement("p")
+let img = document.createElement("img")
+div.appendChild(img)
 div.appendChild(p1)
 div.appendChild(p2)
 div.appendChild(p3)
@@ -28,4 +30,5 @@ displayData = (json) => {
     p1.innerText = json.results[0].name.title + " " + json.results[0].name.first + " " + json.results[0].name.last
     p2.innerText = json.results[0].gender
     p3.innerText = "Date of birth: " + json.results[0].dob.date
+    img.setAttribute("src", json.results[0].picture.large )
 }
