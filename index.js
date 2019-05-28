@@ -1,4 +1,4 @@
-let div = document.getElementsById("root")
+let div = document.getElementById("root")
 let p1 = document.createElement("p")
 let p2 = document.createElement("p")
 let p3 = document.createElement("p")
@@ -12,13 +12,17 @@ div.appendChild(p4)
 div.appendChild(p5)
 div.appendChild(p6)
 
-fetch("https://randomuser.me/api/", 
+fetch("https://randomuser.me/api/", {
     method: "GET",
     headers: {
         "Content-Type": "application/json",
         Accept: "application/json"
     }
+    }
 )
 .then(resp => resp.json())
 .then(json => displayData(json))
 
+displayData = (json) => {
+    console.log(json)
+}
