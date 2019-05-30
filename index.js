@@ -15,11 +15,7 @@ div.appendChild(p5)
 div.appendChild(p6)
 
 fetch("https://randomuser.me/api/", {
-    method: "GET",
-    headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json"
-    }
+    method: "GET"
     }
 )
 .then(resp => resp.json())
